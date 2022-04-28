@@ -1,0 +1,55 @@
+:root {
+    /* Renkler */
+    --bg-color: #586eda;
+    --white: #e8ebf1;
+    --black: #9ea4c9;
+
+    /* Dokunmayın */
+    --fcc: #0a0a23;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    --bg-size-x: 100px;
+    --bg-size-y: 100px;
+
+    background-image: radial-gradient(var(--black) 20%, transparent 20%),
+        radial-gradient(var(--white) 20%, transparent 20%);
+    background-color: var(--bg-color);
+    /* background-color: #e8ebf1; */
+    background-size: var(--bg-size-x) var(--bg-size-y);
+    min-height: 100vh;
+    max-width: 100vw;
+    background-position: 0 0, calc(var(--bg-size-x) / 2) calc(var(--bg-size-y) / 2);
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.poster-cont {
+    /* Poster Aralığı */
+    --margb: 8px;
+
+    margin: 0;
+    margin-bottom: var(--margb);
+    padding: 0;
+    max-width: 100vw;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body a:last-child .poster-cont {
+    --margb: 0;
+}
+
+.poster {
+    max-width: 100vw;
+    max-height: 100vh;
+}
